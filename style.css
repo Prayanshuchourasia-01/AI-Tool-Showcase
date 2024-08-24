@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+/* import google font of Plus Jakarta Sans
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+/* importing google font of itim  */
+
+
+:root {
+    --bgColor: #1A1A40;
+    --textColor: linear-gradient(to left, #D0696A, #7EE2F6);
+    --navEleColor: #00ffff;
+    --navLogo: #8A2BE2;
+    --fontFirst: Plus Jakarta Sans;
+    --fontItim: itim;
+    --imgbg: linear-gradient(var(--navLogo), #0004fc)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: itim;
+    box-sizing: border-box;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: var(--bgColor);
+
+}
+
+/* navigation here  */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 100px;
+    height: 100px;
+    background: var(--bgColor);
+    border-bottom: 2px solid white;
+
+}
+
+nav h2 {
+    color: var(--navLogo);
+    font-family: var(--fontFirst);
+    letter-spacing: 4px;
+    word-spacing: 7px;
+    font-size: 1.5em;
+}
+
+
+nav .navEle {
+    display: flex;
+    /* margin-right: 40px; */
+    justify-content: space-evenly;
+    width: 600px;
+}
+
+.navEle a {
+    text-decoration: none;
+    color: var(--navEleColor);
+    position: relative;
+    width: max-content;
+    font-size: large;
+}
+
+.navEle a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    top: 105%;
+    /* bottom:0; */
+    left: 0;
+    background: var(--textColor);
+    transition: 100ms;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+
+
+
+/*  Hero section Style Here  */
+main {
+    margin: 100px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 20px;
+
+}
+
+.p1 {
+    width: 600px;
+}
+
+.p1 h1 {
+    font-size: 4em;
+    /* color: var(--textColor);
+    background: var(--textColor); */
+    background: linear-gradient(to right, #D0696A, #7EE2F6);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+.p1 p {
+    font-size: 1.5em;
+    margin: 25px 0 50px 0;
+    color: rgb(189, 189, 189);
+
+}
+
+.btn-BlackWhite {
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    padding: 24px;
+    transition: all .2s ease-in;
+    border-radius: 5px;
+}
+
+.btn-BlackWhite:hover {
+    color: black;
+    background: white;
+}
+
+
+.p2 {
+    width: 600px;
+    height: 500px;
+    background: var(--imgbg);
+    margin: 0 50px 0 0;
+    border-radius: 80px;
+
+}
+
+.p2 img {
+    width: 600px;
+    height: 500px;
+    padding: 2px 2px 5px 2px;
+    border-radius: 80px;
+}
+
+/* hero section style end here  */
+
+
+/* AI TOOLS Section start here   */
+
+.aiTool {
+    margin: 100px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid white;
+}
+
+.aiTool h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background: #fff;
+    margin-bottom: 3em;
+}
+
+.aiTool .aiToolEle {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    place-items: center;
+    gap: 1em;
+}
+
+
+.tool1 {
+    background: #fff;
+    height: 500px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tool1 img {
+    height: 200px;
+    width: 300px;
+    display: flex;
+    margin: 20px auto;
+    object-fit: contain;
+    border-radius: 20px;
+
+}
+
+.tool1 .categories {
+    color: var(--navLogo);
+    text-decoration: none;
+    margin: 5px 30px;
+}
+
+.tool1 h2 {
+    margin: 5px 30px;
+}
+
+.tool1 p {
+    margin: 5px 30px;
+    opacity: 0.7;
+}
+
+.tool1 .goToLink {
+    margin: 15px 30px;
+    text-decoration: none;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border-radius: 10px;
+    width: 100px;
+    background: #000;
+    border: 2px solid black;
+    transition: 100ms;
+}
+
+.tool1 .goToLink:hover {
+    color: black;
+    background: #fff;
+}
+
+
+/*  footer style start here  */
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: 100px;
+    place-items: center;
+}
+
+footer h1 {
+    color: var(--navLogo);
+    letter-spacing: 0.25em;
+    user-select: none;
+}
+
+
+.footer2 h2 {
+    font-size: 1.7em;
+    color: #fff;
+    margin-bottom: 15px;
+    user-select: none;
+}
+
+.footer2 .footerLink {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer2 .footerLink a {
+    text-decoration: none;
+    width: max-content;
+    margin: 10px 0;
+    padding: 3px;
+    color: #9c9c9c;
+    position: relative;
+}
+
+
+.footer2 .footerLink a:hover {
+    color: #fff;
+}
+
+.footer2 .footerLink a::before {
+    content: "";
+    height: 4px;
+    font-weight: 900;
+    /* width: 10px; */
+    position: absolute;
+    background: var(--textColor);
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    transition: 500ms;
+
+}
+
+.footer2 .footerLink a:hover:before {
+    width: 100%;
+}
+
+.copyright {
+    height: 100px;
+    width: 100%;
+    /* margin:30px 100px; */
+    /* padding: 40px 100px 30px 100px; */
+    background: #0B0B2E;
+}
+
+.copyright h5 {
+    font-size: 1.5em;
+    color: #98A2B3;
+    padding: 20px 100px 40px;
+    user-select: none;
+}
